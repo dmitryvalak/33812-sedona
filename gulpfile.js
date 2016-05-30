@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     cssnano = require('gulp-cssnano'),
     sass = require('gulp-sass'),
+    eol = require('gulp-eol'),
     imagemin = require('gulp-imagemin');
 
 
@@ -36,6 +37,7 @@ var path = {
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
         .pipe(rigger())
+        .pipe(eol())
         .pipe(gulp.dest(path.build.html));
 });
 
