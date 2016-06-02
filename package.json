@@ -23,7 +23,7 @@
         "gulp-plumber": "^1.1.0",
         "gulp-imagemin": "^2.4.0",
         "browser-sync": "^2.12.10",
-        "editorconfig-tools": "0.1.1",
+        "editorconfig-tools": "0.1.1"
     },
     "scripts": {
         "test": "editorconfig-tools check *",
