@@ -9,6 +9,7 @@ var gulp = require("gulp"),
     watch = require('gulp-watch'),
     plumber = require("gulp-plumber"),
     imagemin = require('gulp-imagemin'),
+    eol = require('gulp-eol'),
     webserver = require("browser-sync");
 
 
@@ -66,6 +67,7 @@ gulp.task('html:build', function () {
     gulp.src(path.src.html)
         .pipe(plumber())
         .pipe(rigger())
+        .pipe(eol())
         .pipe(gulp.dest(path.build.html))
         .pipe(webserver.reload({stream: true}));
 });
