@@ -1,0 +1,15 @@
+.developers {
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.developers__text {
+    margin-right: 5px;
+}
+
+.developers__text,
+.developers__logo {
+    display: inline-block;
+    vertical-align: middle;
+}

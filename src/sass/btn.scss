@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+
+    font-family: $bold-font;
+    font-size: $btn;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border: 0;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &--blue {
+        color: $white;
+
+        background-color: $blue;
+    }
+
+}

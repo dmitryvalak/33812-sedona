@@ -1,0 +1,30 @@
+.footer-social {
+    margin-bottom: 40px;
+
+    text-align: center;
+    font-size: 0;
+    color: transparent;
+}
+
+.footer-social__item {
+    display: inline-block;
+    width: 46px;
+    height: 48px;
+    margin: 0 3px;
+
+    background-color: $blue;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--tw {
+        background-image: url("#{$i}icon-twitter.svg");
+    }
+
+    &--fb {
+        background-image: url("#{$i}icon-facebook.svg");
+    }
+
+    &--yt {
+        background-image: url("#{$i}icon-youtube.svg");
+    }
+}
