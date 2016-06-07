@@ -11,15 +11,21 @@
 
 
 
+<!-- Photos Header -->
+<section class="section-header">
+
+    <div class="section-header__inner">
+        <h2 class="section-header__title">Фото и видео</h2>
+        <p class="section-header__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+    </div>
+
+</section>
+
+
 
 <!-- Photos -->
 <section class="photos">
     <div class="photos__inner">
-
-        <header class="section-header">
-            <h2 class="section-header__title">Фото и видео</h2>
-            <p class="section-header__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-        </header>
 
         <div class="photos__list">
 
@@ -77,7 +83,7 @@
         </header>
 
         <div class="video__source">
-            <video poster="img/video-mobile@1x.jpg" class="video__media" width="320" height="200">
+            <video class="video__media" poster="img/video-mobile@1x.jpg" width="320" height="200">
                 <source src="" type="video/mp4">
                 <source src="" type="video/ogg">
                 <source src="" type="video/webm">
@@ -85,13 +91,13 @@
 
             <div class="video__controls">
                 <header class="video__controls-volume">
-                    <input type="range" min="0" max="100" value="80" step="1" name="" class="video__volume" id="js-video-volume">
+                    <input class="video__volume" type="range" min="0" max="100" value="80" step="1" name="" id="js-video-volume">
                 </header>
 
                 <div class="video__controls-buttons">
-                    <button type="button" class="btn btn--replay" id="js-replay"></button>
-                    <button type="button" class="btn btn--fullscreen" id="js-fullscreen"></button>
-                    <button type="button" class="btn btn--subtitles" id="js-subtitles"></button>
+                    <button class="btn btn--replay" type="button" id="js-replay"></button>
+                    <button class="btn btn--fullscreen" type="button" id="js-fullscreen"></button>
+                    <button class="btn btn--subtitles" type="button" id="js-subtitles"></button>
                 </div>
             </div>
         </div>

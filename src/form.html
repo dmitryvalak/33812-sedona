@@ -11,35 +11,41 @@
 
 
 
+<!-- Form Header -->
+<section class="section-header">
+
+    <div class="section-header__inner">
+        <h2 class="section-header__title">Оставьте свой отзыв</h2>
+        <p class="section-header__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    </div>
+
+</section>
+
+
+
 <!-- Review Form -->
 <section class="form">
     <div class="form__inner">
-
-        <header class="section-header">
-            <h2 class="section-header__title">Оставьте свой отзыв</h2>
-            <p class="section-header__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-        </header>
-
 
         <form action="#" method="#">
 
             <!-- Personal Data -->
             <fieldset class="form__fieldset">
-                <legend class="form__fieldset-title">Представьтесь, пожалуйста:</legend>
+                <h3 class="form__fieldset-title">Представьтесь, пожалуйста:</h3>
 
                 <div class="form__group">
-                    <label for="name" class="form__label  form__label--inline">Имя:</label>
-                    <input type="text" name="name" id="name" class="form__input  form__input--inline" placeholder="Петр">
+                    <label class="form__label  form__label--inline" for="name">Имя:</label>
+                    <input class="form__input  form__input--inline" type="text" name="name" id="name" placeholder="Петр">
                 </div>
 
                 <div class="form__group">
-                    <label for="sname" class="form__label  form__label--inline">Фамилия:</label>
-                    <input type="text" name="sname" id="sname" class="form__input  form__input--inline" placeholder="Иванов">
+                    <label class="form__label  form__label--inline" for="sname">Фамилия:</label>
+                    <input class="form__input  form__input--inline" type="text" name="sname" id="sname" placeholder="Иванов">
                 </div>
 
                 <div class="form__group">
-                    <label for="tname" class="form__label  form__label--inline">Отчество:</label>
-                    <input type="text" name="tname" id="tname" class="form__input  form__input--inline" placeholder="Александрович">
+                    <label class="form__label  form__label--inline" for="tname">Отчество:</label>
+                    <input class="form__input  form__input--inline" type="text" name="tname" id="tname" placeholder="Александрович">
                 </div>
             </fieldset>
 
@@ -47,21 +53,21 @@
 
             <!-- Contact Data -->
             <fieldset class="form__fieldset">
-                <legend class="form__fieldset-title">Контактная информация:</legend>
+                <h3 class="form__fieldset-title">Контактная информация:</h3>
 
                 <div class="form__group">
-                    <label for="tel" class="form__label">Контактный телефон:</label>
+                    <label class="form__label" for="tel">Контактный телефон:</label>
                     <div class="form__input-wrapper  form__input-wrapper--tel">
-                        <input type="tel" name="tel" id="tel" class="form__input  form__input--icon" placeholder="Введите телефон">
+                        <input class="form__input  form__input--icon" type="tel" name="tel" id="tel" placeholder="Введите телефон">
                     </div>
 
                     <div class="form__error">Ошибка, перепроверьте номер</div>
                 </div>
 
                 <div class="form__group">
-                    <label for="email" class="form__label">Электронная почта:</label>
+                    <label class="form__label" for="email">Электронная почта:</label>
                     <div class="form__input-wrapper  form__input-wrapper--email">
-                        <input type="email" name="email" id="email" class="form__input  form__input--icon" placeholder="Введите e-mail">
+                        <input class="form__input  form__input--icon" type="email" name="email" id="email" placeholder="Введите e-mail">
                     </div>
                 </div>
             </fieldset>
@@ -70,30 +76,21 @@
 
             <!-- Rating -->
             <fieldset class="form__fieldset">
-                <legend class="form__fieldset-title">Ваше общее впечатление:</legend>
+                <h3 class="form__fieldset-title">Ваше общее впечатление:</h3>
 
                 <div class="form__group">
-                    <label class="form__label  form__label--radio" for="rating-good">
-                        <input type="radio" name="rating" id="rating-good" class="form__radio" checked>
-                        <span class="form__radio-circle"></span>
-                        Скорее положительное
-                    </label>
+                    <input class="form__radio" type="radio" name="rating" id="rating_good" checked>
+                    <label class="form__radio-label" for="rating_good">Скорее положительное</label>
                 </div>
 
                 <div class="form__group">
-                    <label class="form__label  form__label--radio" for="rating-medium">
-                        <input type="radio" name="rating" id="rating-medium" class="form__radio">
-                        <span class="form__radio-circle"></span>
-                        Скорее отрицательное
-                    </label>
+                    <input class="form__radio" type="radio" name="rating" id="rating_bad">
+                    <label class="form__radio-label" for="rating_bad">Скорее отрицательное</label>
                 </div>
 
                 <div class="form__group">
-                    <label class="form__label  form__label--radio" for="rating-neutral">
-                        <input type="radio" name="rating" id="rating-neutral" class="form__radio">
-                        <span class="form__radio-circle"></span>
-                        Затрудняюсь ответить
-                    </label>
+                    <input class="form__radio" type="radio" name="rating" id="rating_hard">
+                    <label class="form__radio-label" for="rating_hard">Затрудняюсь ответить</label>
                 </div>
             </fieldset>
 
@@ -101,38 +98,26 @@
 
             <!-- Places -->
             <fieldset class="form__fieldset">
-                <legend class="form__fieldset-title">Посещенные достопримечательности:</legend>
+                <h3 class="form__fieldset-title">Посещенные достопримечательности:</h3>
 
                 <div class="form__group">
-                    <label class="form__label  form__label--checkbox" for="place-1">
-                        <input type="checkbox" name="place_1" id="place-1" class="form__checkbox" checked>
-                        <span class="form__checkbox-tick"></span>
-                        Мост Дьявола
-                    </label>
+                    <input class="form__checkbox" type="checkbox" name="place_1" id="place_1" checked>
+                    <label class="form__checkbox-label" for="place_1">Мост Дьявола</label>
                 </div>
 
                 <div class="form__group">
-                    <label class="form__label  form__label--checkbox" for="place-2">
-                        <input type="checkbox" name="place_2" id="place-2" class="form__checkbox" checked>
-                        <span class="form__checkbox-tick"></span>
-                        Слайд-парк
-                    </label>
+                    <input class="form__checkbox" type="checkbox" name="place_2" id="place_2" checked>
+                    <label class="form__checkbox-label" for="place_2">Слайд-парк</label>
                 </div>
 
                 <div class="form__group">
-                    <label class="form__label  form__label--checkbox" for="place-3">
-                        <input type="checkbox" name="place_3" id="place-3" class="form__checkbox">
-                        <span class="form__checkbox-tick"></span>
-                        Гора-Колокол
-                    </label>
+                    <input class="form__checkbox" type="checkbox" name="place_3" id="place_3">
+                    <label class="form__checkbox-label" for="place_3">Гора-Колокол</label>
                 </div>
 
                 <div class="form__group">
-                    <label class="form__label  form__label--checkbox" for="place-4">
-                        <input type="checkbox" name="place_4" id="place-4" class="form__checkbox" checked>
-                        <span class="form__checkbox-tick"></span>
-                        Красные скалы
-                    </label>
+                    <input class="form__checkbox" type="checkbox" name="place_4" id="place_4" checked>
+                    <label class="form__checkbox-label" for="place_4">Красные скалы</label>
                 </div>
             </fieldset>
 
@@ -140,13 +125,13 @@
 
             <!-- Emotions -->
             <fieldset class="form__fieldset">
-                <legend class="form__fieldset-title">Опишите свои эмоции:</legend>
+                <h3 class="form__fieldset-title">Опишите свои эмоции:</h3>
 
                 <div class="form__group">
-                    <textarea name="review_text" id="review-text" class="form__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
+                    <textarea class="form__textarea" name="review_text" id="review-text" placeholder="Опишите подробно все свои восторги"></textarea>
                 </div>
                 <div class="form__group  form__group--big">
-                    <button type="submit" class="btn btn--blue">Отправить отзыв</button>
+                    <button class="btn btn--blue" type="submit">Отправить отзыв</button>
                 </div>
             </fieldset>
 

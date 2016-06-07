@@ -6,6 +6,8 @@
     margin: 0;
     padding: 20px;
     border-top: 1px solid #e5e5e5;
+
+    box-sizing: border-box;
 }
 
 .form__fieldset-title {
@@ -65,26 +67,15 @@
     font-size: 18px;
     font-weight: bold;
 
+    box-sizing: border-box;
+
     &:focus {
         outline: 0;
     }
 
-    &::-webkit-input-placeholder {
+    &::placeholder {
        color: $black;
     }
-
-    &:-moz-placeholder {
-       color: $black;
-    }
-
-    &::-moz-placeholder {
-       color: $black;
-    }
-
-    &:-ms-input-placeholder {
-       color: $black;
-    }
-
 
     &--icon {
         padding-right: 70px;
@@ -138,22 +129,31 @@
     }
 }
 
-.form__radio,
-.form__checkbox {
-    display: none;
-}
 
-.form__radio-circle,
-.form__checkbox-tick {
-    display: inline-block;
-    vertical-align: middle;
-    width: 56px;
-    height: 56px;
-    margin-right: 20px;
 
-    background-color: $light_grey;
+
+/* Radio + Checkbox
+======================*/
+
+.form__radio-label,
+.form__checkbox-label {
+    display: block;
+
+    font-size: 18px;
+    font-weight: bold;
 
     position: relative;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 56px;
+        height: 56px;
+        margin-right: 20px;
+
+        background-color: $light_grey;
+    }
 
     &:after {
         content: "";
@@ -163,16 +163,19 @@
 
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 17px;
         z-index: 1;
 
-        transform: translate3d(-50%, -50%, 0);
+        transform: translateY(-50%);
         transition: opacity 0.1s linear;
     }
 }
 
-.form__radio-circle {
-    border-radius: 50%;
+.form__radio-label {
+
+    &:before {
+        border-radius: 50%;
+    }
 
     &:after {
         width: 22px;
@@ -183,8 +186,11 @@
     }
 }
 
-.form__checkbox-tick {
-    border-radius: 5px;
+.form__checkbox-label {
+
+    &:before {
+        border-radius: 5px;
+    }
 
     &:after {
         width: 24px;
@@ -192,37 +198,25 @@
 
         background: url("#{$i}icon-tick.svg") no-repeat;
     }
+
 }
 
-.form__radio:checked {
+.form__radio,
+.form__checkbox {
+    display: none;
 
-    + .form__radio-circle:after {
+    &:checked + &-label:after {
         opacity: 1;
     }
 }
 
-.form__checkbox:checked {
 
-    + .form__checkbox-tick:after {
-        opacity: 1;
-    }
-}
+
+/* Form Messages
+======================*/
 
 .form__error {
     margin: 10px 0 0 20px;
 
     color: $error;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
