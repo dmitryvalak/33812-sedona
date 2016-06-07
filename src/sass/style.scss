@@ -1,15 +1,15 @@
-/* Bootstrap Mixins & normalize
+/* Normalize
 =========================*/
 
-@import "_mixins";
-@import "_normalize";
+@import "vendor/_normalize";
 
 
 
-/* Variables, helpers & fonts
+/* Variables, mixins, helpers & fonts
 =========================*/
 
 @import "_variables";
+@import "_mixins";
 @import "_helpers";
 @import "_fonts";
 
@@ -39,20 +39,20 @@ fieldset {
 /* Import Block
 =========================*/
 
-@import "page-header";
-@import "main-nav";
-@import "nav-burger";
-@import "intro";
-@import "reasons";
-@import "section-header";
-@import "benefits";
-@import "benefits-list";
-@import "cta";
-@import "btn";
-@import "map";
-@import "page-footer";
-@import "footer-social";
-@import "developers";
-@import "form";
-@import "photos";
-@import "video";
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/nav-burger";
+@import "blocks/intro";
+@import "blocks/reasons";
+@import "blocks/section-header";
+@import "blocks/benefits";
+@import "blocks/benefits-list";
+@import "blocks/cta";
+@import "blocks/btn";
+@import "blocks/map";
+@import "blocks/page-footer";
+@import "blocks/footer-social";
+@import "blocks/developers";
+@import "blocks/form";
+@import "blocks/photos";
+@import "blocks/video";
