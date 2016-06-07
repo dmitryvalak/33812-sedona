@@ -1,0 +1,17 @@
+@mixin clearfix() {
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin container() {
+    width: 320px;
+    margin: 0 auto;
+}

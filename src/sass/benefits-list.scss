@@ -1,0 +1,32 @@
+.benefits-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.benefits-list__item {
+    margin-bottom: 20px;
+    padding: 10px 0 0 50px;
+    position: relative;
+}
+
+.benefits-list__title {
+    margin-bottom: 15px;
+
+    font-size: $benefits-title;
+    color: $black;
+    text-transform: uppercase;
+}
+
+.benefits-list__text {
+    color: $black;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.benefits-list__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
