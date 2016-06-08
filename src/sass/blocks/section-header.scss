@@ -29,6 +29,10 @@
 
     .section-header__title {
         font-size: $section-header-title-tablet;
+
+        &--inner {
+            font-size: $section-header-title-inner-tablet;
+        }
     }
 
 }
