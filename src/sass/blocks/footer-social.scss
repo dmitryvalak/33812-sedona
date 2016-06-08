@@ -16,6 +16,8 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    transition: background-color 0.1s linear;
+
     &--tw {
         background-image: url("#{$i}icon-twitter.svg");
     }
@@ -26,6 +28,14 @@
 
     &--yt {
         background-image: url("#{$i}icon-youtube.svg");
+    }
+
+    &:hover {
+        background-color: $blue-hover;
+    }
+
+    &:active {
+        background-color: $blue-active;
     }
 }
 
