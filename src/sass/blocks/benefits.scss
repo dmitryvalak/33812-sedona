@@ -1,7 +1,15 @@
 .benefits__inner {
-    width: 320px;
-    margin: 0 auto;
-    padding: 20px 18px;
+    @include container();
+    padding: 20px;
 
     box-sizing: border-box;
+}
+
+
+@media (#{$tablet-width}) {
+
+    .benefits__inner {
+        padding: 50px 10px;
+    }
+
 }
