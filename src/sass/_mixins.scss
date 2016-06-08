@@ -11,12 +11,12 @@
     }
 }
 
-@mixin container() {
+@mixin container($tablet: $tablet-width, $desktop: $desktop-width) {
     width: 100%;
-    max-width: 768px;
+    max-width: $tablet;
     margin: 0 auto;
 
     @media (#{$tablet-width}) {
-        max-width: 1200px;
+        max-width: $desktop;
     }
 }
