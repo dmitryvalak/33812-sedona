@@ -13,6 +13,7 @@
     border: 0;
 
     box-sizing: border-box;
+    transition: background-color 0.1s linear, color 0.1s linear;
 
     &:focus {
         outline: 0;
@@ -22,6 +23,20 @@
         color: $white;
 
         background-color: $blue;
+
+        &:hover {
+            background-color: $blue-hover;
+        }
+
+        &:active {
+            color: transparentize($white, 0.7);
+            background-color: $blue-active;
+        }
+
+        &:disabled {
+            background-color: $blue-disabled;
+            cursor: not-allowed;
+        }
     }
 
     &--replay {
