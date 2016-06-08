@@ -27,6 +27,11 @@
 
 @media (#{$tablet-width}) {
 
+    .section-header__inner {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
     .section-header__title {
         font-size: $section-header-title-tablet;
 

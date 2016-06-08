@@ -52,6 +52,7 @@
 @media (#{$tablet-width}) {
 
     .intro {
+        height: 290px;
         background-size: auto 518px;
 
         &:after {

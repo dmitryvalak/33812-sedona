@@ -85,6 +85,10 @@
         }
 
         &:nth-child(odd) .photos__info {
+            background-color: #eaeaea;
+        }
+
+        &:nth-child(even) .photos__info {
             background-color: #f2f2f2;
         }
     }

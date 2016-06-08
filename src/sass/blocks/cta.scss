@@ -29,6 +29,10 @@
 
 @media (#{$tablet-width}) {
 
+    .cta__inner {
+        padding-top: 50px;
+    }
+
     .cta__title {
         font-size: $cta-title-tablet;
     }
