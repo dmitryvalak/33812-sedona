@@ -17,17 +17,20 @@
 }
 
 .reasons__inner {
-    width: 320px;
-    padding: 0 20px;
-    margin: 0 auto;
+    @include container;
     overflow: hidden;
 
     box-sizing: border-box;
+
+    &--small {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .reasons__header {
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 40px 25px;
 
     &--border {
         border-bottom: 1px solid #d6d6d6;
@@ -61,6 +64,7 @@
 .reasons__photo {
     height: 260px;
     position: relative;
+    overflow: hidden;
 
     img {
         display: block;
@@ -74,4 +78,62 @@
 
         transform: translateX(-50%);
     }
+}
+
+
+
+
+@media (#{$tablet-width}) {
+
+    .reasons__inner {
+        @include clearfix;
+        padding: 0;
+    }
+
+    .reasons__title {
+        font-size: $reasons-title-tablet;
+    }
+
+    .reasons__header {
+        width: 33.33333%;
+        padding: 45px 45px 0;
+
+        box-sizing: border-box;
+
+        &--left {
+            float: left;
+        }
+
+        &--right {
+            float: right;
+        }
+
+        &--small {
+            float: left;
+            padding: 45px 48px;
+        }
+
+        &--border {
+            border-bottom: 0;
+        }
+    }
+
+    .reasons__photo {
+        width: 66.66666%;
+
+        img {
+            position: static;
+
+            transform: translateX(0);
+        }
+
+        &--left {
+            float: left;
+        }
+
+        &--right {
+            float: right;
+        }
+    }
+
 }
