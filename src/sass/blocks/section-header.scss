@@ -23,3 +23,12 @@
     color: $black;
     line-height: 1.8;
 }
+
+
+@media (#{$tablet-width}) {
+
+    .section-header__title {
+        font-size: $section-header-title-tablet;
+    }
+
+}

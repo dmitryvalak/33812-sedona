@@ -25,3 +25,12 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+
+@media (#{$tablet-width}) {
+
+    .cta__title {
+        font-size: $cta-title-tablet;
+    }
+
+}
