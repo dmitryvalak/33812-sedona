@@ -1,23 +1,28 @@
 .page-header__inner {
-    width: 320px;
-    margin: 0 auto;
+    @include container;
+    padding-bottom: 56px;
 
     background-color: $white;
 
     position: relative;
 }
 
-.page-header__lala {
-    height: 56px;
-}
-
 .page-header__logo {
     display: block;
 
     position: absolute;
-    top: 0;
+    bottom: -31px;
     left: 50%;
     z-index: 1;
 
     transform: translateX(-50%);
+}
+
+
+@media (#{$tablet-width}) {
+
+    .page-header__inner {
+        padding-bottom: 0;
+    }
+
 }
