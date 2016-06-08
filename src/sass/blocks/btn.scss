@@ -52,3 +52,39 @@
     }
 
 }
+
+
+@media (#{$tablet-width}) {
+
+    .btn {
+
+        &--replay,
+        &--subtitles,
+        &--fullscreen {
+            float: none;
+
+            position: absolute;
+            top: 33px;
+            z-index: 1;
+        }
+
+        &--replay {
+            left: 35px;
+        }
+
+        &--subtitles {
+            right: 90px;
+        }
+
+        &--fullscreen {
+            right: 40px;
+        }
+    }
+
+}
+
+
+
+
+
+
