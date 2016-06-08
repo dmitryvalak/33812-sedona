@@ -1,6 +1,5 @@
 .page-footer__inner {
-    width: 320px;
-    margin: 0 auto;
+    @include container;
     padding: 35px 20px 20px;
 
     box-sizing: border-box;
@@ -13,4 +12,26 @@
     font-size: $hash;
     text-align: center;
     text-transform: uppercase;
+}
+
+
+
+@media (#{$tablet-width}) {
+
+    .page-footer__inner {
+        @include clearfix;
+        padding-bottom: 35px;
+    }
+
+    .page-footer__third {
+        width: 33.33333%;
+        float: left;
+    }
+
+    .page-footer__hash-tag {
+        margin-bottom: 0;
+
+        line-height: 48px;
+    }
+
 }

@@ -28,3 +28,12 @@
         background-image: url("#{$i}icon-youtube.svg");
     }
 }
+
+
+@media (#{$tablet-width}) {
+
+    .footer-social {
+        margin-bottom: 0;
+    }
+
+}

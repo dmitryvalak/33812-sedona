@@ -9,3 +9,12 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+
+
+@media (#{$tablet-width}) {
+
+    .developers {
+        line-height: 48px;
+    }
+}
