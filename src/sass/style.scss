@@ -17,7 +17,7 @@
 body {
     font-family: $main-font;
     font-size: $regular;
-    background-color: $white;
+    background-color: $light_grey;
     min-width: 320px;
 }
 
@@ -34,6 +34,7 @@ fieldset {
 /* Import Block
 =========================*/
 
+@import "blocks/page-wrapper";
 @import "blocks/page-header";
 @import "blocks/main-nav";
 @import "blocks/nav-burger";
