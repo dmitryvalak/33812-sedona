@@ -38,3 +38,11 @@
     }
 
 }
+
+
+@media (#{$desktop-width}) {
+
+    .page-footer__hash-tag {
+        text-align: center;
+    }
+}

@@ -19,3 +19,10 @@
         line-height: 48px;
     }
 }
+
+@media (#{$desktop-width}) {
+
+    .developers {
+        padding-right: 45px;
+    }
+}
