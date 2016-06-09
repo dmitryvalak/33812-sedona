@@ -106,6 +106,7 @@
         padding-right: 20px;
 
         @include clearfix;
+        box-sizing: border-box;
     }
 
     .photos__info-left,
@@ -127,5 +128,50 @@
         margin-bottom: 0;
     }
 
+}
+
+
+
+@media (#{$desktop-width}) {
+
+    .photos__list {
+        max-width: none;
+    }
+
+    .photos__item {
+        width: 33.33333%;
+        position: relative;
+
+        &--big {
+            width: 100%;
+        }
+
+        &:nth-child(odd) .photos__info,
+        &:nth-child(even) .photos__info {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+    }
+
+    .photos__info {
+        width: 100%;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .photos__name {
+        color: $white;
+    }
+
+    .photos__author {
+        color: $white;
+    }
+
+    .photos__likes {
+        color: $white;
+    }
 
 }
