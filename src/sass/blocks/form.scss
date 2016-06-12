@@ -26,22 +26,24 @@
 
     position: relative;
 
-    @include clearfix;
-
     &--big   { margin-top: 50px; }
-    &--small { margin-top: 12px; }
+
+    &--flex-input {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .form__label {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     margin: 0 0 10px 20px;
 
     color: #333;
     text-transform: uppercase;
+    cursor: pointer;
 
     &--inline {
-        display: inline-block;
-        vertical-align: middle;
         margin: 0 15px 0 0;
     }
 
@@ -92,9 +94,7 @@
     }
 
     &--inline {
-        width: auto;
-        display: inline-block;
-        vertical-align: middle;
+        flex-grow: 1;
     }
 }
 
@@ -147,7 +147,7 @@
 
 .form__radio-label,
 .form__checkbox-label {
-    display: block;
+    display: inline-block;
 
     font-size: 18px;
     font-weight: bold;
@@ -253,13 +253,37 @@
 
 @media (#{$tablet-width}) {
 
+    .form__data-form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     .form__fieldset {
+        flex-basis: 100%;
         border-top: 0;
         padding-left: 0;
         padding-right: 0;
+
+        &--rating {
+            flex-basis: 50%;
+            align-self: flex-start;
+            order: -1;
+            padding-top: 0;
+
+            border-right: 1px solid #dbdbdb;
+        }
+
+        &--personal {
+            flex-basis: 50%;
+            align-self: flex-end;
+            padding-left: 55px;
+            padding-top: 0;
+        }
     }
 
     .form__fieldset-title {
+        font-size: $fieldset-title-tablet;
         text-align: left;
 
         &--centered {
@@ -296,21 +320,44 @@
         }
     }
 
-    .form__group {
-        margin-top: 25px;
+    .form__checkbox-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
-        &--half {
-            float: left;
-            width: 50%;
-            margin-top: 30px;
+        width: 500px;
+        margin: 20px auto;
+
+        .form__group {
+            flex-basis: 50%;
+
+            &--bridge {
+                order: 1;
+            }
+
+            &--mountain {
+                order: 2;
+            }
+
+            &--park {
+                order: 3;
+            }
+
+            &--rock {
+                order: 4;
+            }
         }
     }
 
-    .form__checkbox-wrapper {
-        width: 470px;
-        margin: 20px auto;
+    .form__btn-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
 
-        @include clearfix;
+        .form__group {
+            flex-grow: 1;
+        }
     }
 
     .form__error {
@@ -328,7 +375,6 @@
         color: $light_black;
         text-transform: uppercase;
         text-align: right;
-        line-height: 58px;
     }
 
 }
@@ -337,21 +383,48 @@
 
 @media (#{$desktop-width}) {
 
+    .form__fieldset {
+
+        &--personal {
+            padding-left: 75px;
+        }
+    }
+
     .form__checkbox-wrapper {
         width: 100%;
+        flex-wrap: nowrap;
+
+        .form__group {
+            flex-basis: auto;
+        }
+    }
+
+    .form__group-contacts-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0 30px;
+
+        .form__group {
+            display: flex;
+            align-items: center;
+        }
+
+        .form__label {
+            margin: 0 20px 0 0;
+        }
     }
 
     .form__group {
-        margin-top: 55px;
 
         &--half {
             width: 25%;
         }
+    }
 
-        &--half-desktop {
-            width: 50%;
-            float: left;
-        }
+    .form__error {
+        left: 110px;
+        top: auto;
+        bottom: 65px;
     }
 
 }
