@@ -19,15 +19,16 @@
 @media (#{$tablet-width}) {
 
     .page-footer__inner {
-        @include clearfix;
+        display: flex;
+        justify-content: space-between;
+
         padding-bottom: 35px;
         padding-left: 0;
         padding-right: 0;
     }
 
     .page-footer__third {
-        width: 33.33333%;
-        float: left;
+        flex-basis: 33.33333%;
     }
 
     .page-footer__hash-tag {
