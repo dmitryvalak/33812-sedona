@@ -75,18 +75,19 @@
 @media (#{$tablet-width}) {
 
     .photos__list {
-        @include clearfix;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
 
     .photos__item {
-        float: left;
-        width: 50%;
+        flex-basis: 50%;
         padding: 0;
+        margin: 0;
         border-top: 0;
 
         &--big {
-            width: 100%;
-            float: none;
+            flex-basis: 100%;
         }
 
         &:nth-child(odd) .photos__info {
@@ -146,11 +147,11 @@
     }
 
     .photos__item {
-        width: 33.33333%;
+        flex-basis: 33.33333%;
         position: relative;
 
         &--big {
-            width: 100%;
+            flex-basis: 100%;
         }
 
         &:nth-child(odd) .photos__info,
