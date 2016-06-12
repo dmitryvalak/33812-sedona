@@ -1,5 +1,5 @@
 .form__inner {
-    @include container(650px);
+    @include container(650px, 960px);
 }
 
 .form__fieldset {
@@ -335,7 +335,26 @@
 
 
 
+@media (#{$desktop-width}) {
 
+    .form__checkbox-wrapper {
+        width: 100%;
+    }
+
+    .form__group {
+        margin-top: 55px;
+
+        &--half {
+            width: 25%;
+        }
+
+        &--half-desktop {
+            width: 50%;
+            float: left;
+        }
+    }
+
+}
 
 
 

@@ -15,12 +15,17 @@
 }
 
 .photos__info {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
     padding: 20px 0;
 }
 
 .photos__image-wrapper {
     width: 100%;
+    max-width: 280px;
     height: 280px;
+    margin: 0 auto;
     overflow: hidden;
 
     position: relative;
@@ -94,6 +99,7 @@
     }
 
     .photos__image-wrapper {
+        max-width: none;
         height: 267px;
 
         &--big {
@@ -102,6 +108,7 @@
     }
 
     .photos__info {
+        max-width: none;
         padding-left: 20px;
         padding-right: 20px;
 
