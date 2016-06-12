@@ -86,7 +86,8 @@
 @media (#{$tablet-width}) {
 
     .reasons__inner {
-        @include clearfix;
+        display: flex;
+        align-items: center;
         padding: 0;
     }
 
@@ -95,21 +96,16 @@
     }
 
     .reasons__header {
-        width: 33.33333%;
-        padding: 45px 45px 0;
+        flex-basis: 33.33333%;
+        padding: 0 45px;
 
         box-sizing: border-box;
 
-        &--left {
-            float: left;
-        }
-
         &--right {
-            float: right;
+            order: 1;
         }
 
         &--small {
-            float: left;
             padding: 45px 48px;
         }
 
@@ -119,21 +115,28 @@
     }
 
     .reasons__photo {
-        width: 66.66666%;
+        flex-basis: 66.66666%;
 
         img {
+            width: 100%;
             position: static;
 
             transform: translateX(0);
         }
+    }
 
-        &--left {
-            float: left;
-        }
+}
 
-        &--right {
-            float: right;
-        }
+
+@media (#{$desktop-width}) {
+
+    .reasons__header {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+
+    .reasons__title {
+        padding: 0 40px;
     }
 
 }
