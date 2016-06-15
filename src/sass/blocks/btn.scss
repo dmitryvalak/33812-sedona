@@ -1,0 +1,122 @@
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+
+    font-weight: bold;
+    font-size: $btn;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border: 0;
+
+    box-sizing: border-box;
+    transition: background-color 0.1s linear, color 0.1s linear;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &--blue {
+        color: $white;
+
+        background-color: $blue;
+
+        &:hover {
+            background-color: $blue-hover;
+        }
+
+        &:active {
+            color: transparentize($white, 0.7);
+            background-color: $blue-active;
+        }
+
+        &:disabled {
+            background-color: $blue-disabled;
+            cursor: not-allowed;
+        }
+    }
+
+    &--blue-in-progress {
+        animation: blue-in-progress;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+
+        transition: background-color 0.1s linear;
+    }
+
+    &--replay {
+        width: 16px;
+        height: 20px;
+        padding: 0;
+
+        background: url("#{$i}icon-video-replay.svg") no-repeat;
+    }
+
+    &--subtitles {
+        float: right;
+        width: 32px;
+        height: 20px;
+        padding: 0;
+
+        background: url("#{$i}icon-video-subtitles.svg") no-repeat;
+    }
+
+    &--fullscreen {
+        float: right;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin-left: 30px;
+
+        background: url("#{$i}icon-video-fullscreen.svg") no-repeat;
+    }
+
+}
+
+
+@keyframes blue-in-progress {
+
+    0%   { background-color: #5496bd; }
+    50%  { background-color: #3e84ae; }
+    100% { background-color: #5496bd; }
+
+}
+
+
+@media (#{$tablet-width}) {
+
+    .btn {
+
+        &--replay,
+        &--subtitles,
+        &--fullscreen {
+            float: none;
+
+            position: absolute;
+            top: 34px;
+            z-index: 1;
+        }
+
+        &--replay {
+            left: 35px;
+        }
+
+        &--subtitles {
+            right: 90px;
+        }
+
+        &--fullscreen {
+            right: 40px;
+        }
+    }
+
+}
+
+
+
+
+
+

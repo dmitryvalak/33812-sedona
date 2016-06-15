@@ -1,0 +1,28 @@
+.page-header__inner {
+    @include container;
+    padding-bottom: 56px;
+
+    background-color: $white;
+
+    position: relative;
+}
+
+.page-header__logo {
+    display: block;
+
+    position: absolute;
+    bottom: -31px;
+    left: 50%;
+    z-index: 1;
+
+    transform: translateX(-50%);
+}
+
+
+@media (#{$tablet-width}) {
+
+    .page-header__inner {
+        padding-bottom: 0;
+    }
+
+}

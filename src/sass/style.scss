@@ -1,29 +1,25 @@
-/* Bootstrap Mixins & normalize
+/* Normalize
 =========================*/
 
-@import "_mixins";
-@import "_normalize";
+@import "vendor/_normalize";
 
 
 
-/* Variables, helpers & fonts
+/* Variables, helpers, mixins & fonts
 =========================*/
 
 @import "_variables";
 @import "_helpers";
+@import "_mixins";
 @import "_fonts";
 
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
 
 body {
     font-family: $main-font;
     font-size: $regular;
-    background-color: $white;
+    background-color: $light_grey;
+    min-width: 320px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -39,20 +35,21 @@ fieldset {
 /* Import Block
 =========================*/
 
-@import "page-header";
-@import "main-nav";
-@import "nav-burger";
-@import "intro";
-@import "reasons";
-@import "section-header";
-@import "benefits";
-@import "benefits-list";
-@import "cta";
-@import "btn";
-@import "map";
-@import "page-footer";
-@import "footer-social";
-@import "developers";
-@import "form";
-@import "photos";
-@import "video";
+@import "blocks/page-wrapper";
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/nav-burger";
+@import "blocks/intro";
+@import "blocks/reasons";
+@import "blocks/section-header";
+@import "blocks/benefits";
+@import "blocks/benefits-list";
+@import "blocks/cta";
+@import "blocks/btn";
+@import "blocks/map";
+@import "blocks/page-footer";
+@import "blocks/footer-social";
+@import "blocks/developers";
+@import "blocks/form";
+@import "blocks/photos";
+@import "blocks/video";

@@ -19,11 +19,11 @@ var gulp = require("gulp"),
 
 var path = {
     build: {
-        html: "./",
-        js: "js/",
-        css: "css/",
-        img: "img/",
-        fonts: "fonts/"
+        html: "dest/",
+        js: "dest/js/",
+        css: "dest/css/",
+        img: "dest/img/",
+        fonts: "dest/fonts/"
     },
     src: {
         html: "src/*.html",
@@ -47,7 +47,7 @@ var path = {
 =========================*/
 
 var config = {
-    server: ".",
+    server: "dest/",
     notify: false,
     open: true,
     ui: false

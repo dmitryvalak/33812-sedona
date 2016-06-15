@@ -8,11 +8,26 @@ $fonts: "../fonts/";
 /* Colors
 =====================*/
 $blue: #81b3d2;
+$blue-hover: #669ec0;
+$blue-active: #5496bd;
+$blue-disabled: #e5e5e5;
+
+$nav-hover: #81b3d2;
+$nav-active: #766357;
+$nav-active-hover: #604e43;
+
 $white: #fff;
+
 $grey: #eee;
 $light_grey: #f2f2f2;
+
 $black: #000;
+$light_black: #333;
+
 $error: #ff5c5c;
+
+$input-hover: #e5e5e5;
+$input-active: #d5d5d5;
 
 
 
@@ -25,10 +40,32 @@ $main-font: "ptsans", sans-serif;
 /* Font-sizes
 =====================*/
 $regular: 14px;
-$mob-nav: 18px;
+
+$nav: 18px;
+$nav-tablet: 14px;
+
 $section-header-title: 18px;
+$section-header-title-tablet: 21px;
+$section-header-title-inner-tablet: 30px;
+
 $reasons-title: 18px;
+$reasons-title-tablet: 21px;
+
 $benefits-title: 18px;
+$benefits-title-tablet: 21px;
+
 $cta-title: 21px;
+$cta-title-tablet: 30px;
+
+$fieldset-title: 18px;
+$fieldset-title-tablet: 21px;
+
 $btn: 21px;
 $hash: 21px;
+
+
+/* Media sizes
+====================*/
+
+$tablet-width: "min-width: 768px";
+$desktop-width: "min-width: 1200px";

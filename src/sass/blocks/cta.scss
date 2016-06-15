@@ -1,0 +1,40 @@
+.cta__inner {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px 20px 50px;
+
+    box-sizing: border-box;
+}
+
+.cta__title {
+    margin-bottom: 20px;
+
+    font-weight: bold;
+    font-size: $cta-title;
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cta__text {
+    margin-bottom: 35px;
+
+    line-height: 1.8;
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+@media (#{$tablet-width}) {
+
+    .cta__inner {
+        padding-top: 50px;
+    }
+
+    .cta__title {
+        font-size: $cta-title-tablet;
+    }
+
+}

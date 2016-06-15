@@ -1,0 +1,143 @@
+.reasons {
+    position: relative;
+
+    &--white {
+        background-color: $white;
+        color: $black;
+    }
+
+    &--blue {
+        background-color: $blue;
+        color: $white;
+    }
+
+    &--grey {
+        background-color: $grey;
+    }
+}
+
+.reasons__inner {
+    @include container;
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    &--small {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.reasons__header {
+    margin: 0 auto;
+    padding: 40px 25px;
+
+    &--border {
+        border-bottom: 1px solid #d6d6d6;
+    }
+
+    &--small {
+        padding: 25px 0;
+    }
+}
+
+.reasons__title {
+    margin-bottom: 10px;
+
+    font-size: $reasons-title;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.reasons__num {
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+.reasons__text {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.reasons__photo {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: auto;
+        margin: 0 auto;
+
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: 1;
+
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+@media (#{$tablet-width}) {
+
+    .reasons__inner {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+
+    .reasons__title {
+        font-size: $reasons-title-tablet;
+    }
+
+    .reasons__header {
+        flex-basis: 33.33333%;
+        padding: 0 45px;
+
+        box-sizing: border-box;
+
+        &--right {
+            order: 1;
+        }
+
+        &--small {
+            align-self: flex-start;
+            padding: 45px 48px;
+        }
+
+        &--border {
+            border-bottom: 0;
+        }
+    }
+
+    .reasons__photo {
+        flex-basis: 66.66666%;
+
+        img {
+            width: 100%;
+            position: static;
+
+            transform: translateX(0);
+        }
+    }
+
+}
+
+
+@media (#{$desktop-width}) {
+
+    .reasons__header {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+
+    .reasons__title {
+        padding: 0 40px;
+    }
+
+}

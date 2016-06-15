@@ -1,3 +1,11 @@
-.collapse {
-    display: none;
+@media (#{$tablet-width}) {
+    .hidden-tablet {
+        display: none;
+    }
+}
+
+@media (#{$desktop-width}) {
+    .hidden-desktop {
+        display: none;
+    }
 }

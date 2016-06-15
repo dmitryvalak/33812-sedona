@@ -1,0 +1,28 @@
+.developers {
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.developers__logo {
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+@media (#{$tablet-width}) {
+
+    .developers {
+        text-align: right;
+        line-height: 48px;
+    }
+}
+
+@media (#{$desktop-width}) {
+
+    .developers {
+        padding-right: 45px;
+    }
+}
