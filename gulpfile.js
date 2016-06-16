@@ -94,8 +94,7 @@ gulp.task("css:build", function () {
 
 gulp.task("fonts:build", function() {
     gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
-        .pipe(webserver.reload({stream: true}));
+        .pipe(gulp.dest(path.build.fonts));
 });
 
 
@@ -106,8 +105,7 @@ gulp.task("image:build", function () {
             svgoPlugins: [{removeViewBox: false}],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.build.img))
-        .pipe(webserver.reload({stream: true}));
+        .pipe(gulp.dest(path.build.img));
 });
 
 

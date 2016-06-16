@@ -10,8 +10,12 @@
     width: 100%;
     height: 200px;
 
-    background: url("#{$i}video-preview.jpg") center no-repeat;
+    background: $light_grey url("#{$i}video-mobile@1x.jpg") center no-repeat;
     background-size: auto 100%;
+
+    @media #{$retina} {
+        background-image: url("#{$i}video-mobile@2x.jpg");
+    }
 }
 
 .video__source {
@@ -144,13 +148,18 @@
         border-top: 0;
     }
 
-    .video__media {
-        height: 500px;
-    }
-
     .video__source {
         width: 650px;
         position: relative;
+    }
+
+    .video__media {
+        height: 500px;
+        background-image: url("#{$i}video-tablet@1x.jpg");
+
+        @media #{$retina} {
+            background-image: url("#{$i}video-tablet@2x.jpg");
+        }
     }
 
     .video__controls {
@@ -197,7 +206,21 @@
 
 
 
+@media (#{$desktop-width}) {
 
+    .video__source {
+        width: 800px;
+    }
+
+    .video__media {
+        background-image: url("#{$i}video-desktop@1x.jpg");
+
+        @media #{$retina} {
+            background-image: url("#{$i}video-desktop@2x.jpg");
+        }
+    }
+
+}
 
 
 
