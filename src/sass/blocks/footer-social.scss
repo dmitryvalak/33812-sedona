@@ -13,21 +13,37 @@
     margin: 0 3px;
 
     background-color: $blue;
-    background-position: center;
-    background-repeat: no-repeat;
 
     transition: background-color 0.1s linear;
 
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        transition: opacity .1s linear;
+    }
+
     &--tw {
-        background-image: url("#{$i}icon-twitter.svg");
+
+        &:after {
+            background: url("#{$i}icon-twitter.svg") center no-repeat;
+        }
     }
 
     &--fb {
-        background-image: url("#{$i}icon-facebook.svg");
+
+        &:after {
+            background: url("#{$i}icon-facebook.svg") center no-repeat;
+        }
     }
 
     &--yt {
-        background-image: url("#{$i}icon-youtube.svg");
+
+        &:after {
+            background: url("#{$i}icon-youtube.svg") center no-repeat;
+        }
     }
 
     &:hover {
@@ -36,6 +52,10 @@
 
     &:active {
         background-color: $blue-active;
+
+        &:after {
+            opacity: 0.3;
+        }
     }
 }
 
