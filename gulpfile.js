@@ -86,7 +86,12 @@ gulp.task("css:build", function () {
                 "last 2 Edge versions"
             ]})
         ]))
-        .pipe(cssnano({zindex: false}))
+        .pipe(cssnano({
+            zindex: false,
+            discardComments: {
+                removeAll: true
+            }
+        }))
         .pipe(gulp.dest(path.build.css))
         .pipe(webserver.reload({stream: true}));
 });
