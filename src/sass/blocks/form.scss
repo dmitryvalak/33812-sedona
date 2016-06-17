@@ -1,5 +1,5 @@
 .form__inner {
-    @include container(650px, 960px);
+    @include container-fluid(960px);
 }
 
 .form__fieldset {
@@ -252,6 +252,11 @@
 
 
 @media (#{$tablet-width}) {
+
+    .form__inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
     .form__data-form {
         display: flex;

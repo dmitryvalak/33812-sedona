@@ -1,5 +1,5 @@
 .page-header__inner {
-    @include container;
+    @include container-fluid;
     padding-bottom: 56px;
 
     background-color: $white;

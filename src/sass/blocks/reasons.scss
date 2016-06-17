@@ -17,7 +17,7 @@
 }
 
 .reasons__inner {
-    @include container;
+    @include container-fluid;
     overflow: hidden;
 
     box-sizing: border-box;

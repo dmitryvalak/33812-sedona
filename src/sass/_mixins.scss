@@ -20,3 +20,9 @@
         max-width: $desktop;
     }
 }
+
+
+@mixin container-fluid($max-width: 1200px) {
+    max-width: $max-width;
+    margin: 0 auto;
+}

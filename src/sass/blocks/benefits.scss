@@ -1,5 +1,5 @@
 .benefits__inner {
-    @include container();
+    @include container-fluid();
     padding: 20px;
 
     box-sizing: border-box;
