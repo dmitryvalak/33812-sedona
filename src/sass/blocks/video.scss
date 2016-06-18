@@ -37,7 +37,6 @@
     display: block;
     width: 100%;
     height: 45px;
-    padding: 12px 22px 0;
 
     background-color: transparentize($black, 0.4);
 
@@ -46,98 +45,83 @@
     box-sizing: border-box;
 }
 
-.video__volume {
-    -webkit-appearance: none;
+.video__volume-slider {
+    width: 235px;
+    height: 3px;
+    margin: auto;
+
+    background-color: transparentize($white, 0.8);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.video__volume-thumb {
+    width: 9px;
+    height: 9px;
+
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+
+    border-radius: 50%;
+    background-color: $white;
+
+    position: absolute;
+    top: -3px;
+    left: 15%;
+    z-index: 1;
+}
+
+.video__controls-buttons {
     width: 100%;
-    margin: 0;
-    outline: none;
+    height: 66px;
 
-    &::-webkit-slider-thumb {
-        margin-top: -3px;
-        width: 9px;
-        height: 9px;
+    background-color: $light_grey;
 
-        border-radius: 50%;
-        background-color: $white;
-        border: 0;
-        cursor: pointer;
-        -webkit-appearance: none;
+    position: relative;
+}
+
+.video__button {
+    background: none;
+    padding: 0;
+    border: 0;
+
+    position: absolute;
+    top: 23px;
+    z-index: 2;
+
+    &--replay {
+        left: 25px;
     }
 
-    &::-moz-range-thumb {
-        margin-top: -3px;
-        width: 9px;
-        height: 9px;
-
-        border-radius: 50%;
-        background-color: $white;
-        border: 0;
-        cursor: pointer;
+    &--subtitles {
+        right: 73px;
     }
 
-    &::-ms-thumb {
-        margin-top: -3px;
-        width: 9px;
-        height: 9px;
-
-        border-radius: 50%;
-        background-color: $white;
-        border: 0;
-        cursor: pointer;
+    &--fullscreen {
+        right: 23px;
     }
 
-    &::-ms-tooltip {
-        display: none;
+    g {
+        fill: #5c6870;
+        transition: fill 0.1s linear;
     }
 
-    &::-webkit-slider-runnable-track {
-        width: 100%;
-        height: 3px;
-
-        cursor: pointer;
-        background: $white;
+    &:hover g {
+        fill: #333;
     }
 
-    &::-moz-range-track {
-        width: 100%;
-        height: 3px;
-        cursor: pointer;
-        background-color: $white;
-    }
-
-    &::-ms-track {
-        width: 100%;
-        height: 3px;
-        cursor: pointer;
-        background: $white;
-        border-color: transparent;
-        color: transparent;
-    }
-
-    &::-ms-fill-lower {
-        width: 100%;
-        height: 3px;
-        cursor: pointer;
-        background: $white;
-    }
-
-    &::-ms-fill-upper {
-        width: 100%;
-        height: 3px;
-        cursor: pointer;
-        background: $white;
+    &:active g {
+        fill: #c1c1c1;
     }
 
     &:focus {
         outline: none;
     }
-}
-
-.video__controls-buttons {
-    @include clearfix;
-    padding: 22px;
-
-    background-color: $light_grey;
 }
 
 
@@ -183,12 +167,16 @@
 
     .video__controls-volume {
         width: 390px;
-        padding: 0;
+        height: 100%;
 
         position: absolute;
-        top: 34px;
+        top: 0;
         left: 93px;
         z-index: 2;
+    }
+
+    .video__volume-slider {
+        width: 100%;
     }
 
     .video__controls-buttons {
@@ -200,6 +188,30 @@
         top: 0;
         left: 0;
         z-index: 1;
+    }
+
+    .video__button {
+        top: 35px;
+
+        &--replay {
+            left: 35px;
+        }
+
+        &--subtitles {
+            right: 92px;
+        }
+
+        &--fullscreen {
+            right: 41px;
+        }
+
+        g {
+            fill: $white;
+        }
+
+        &:hover g {
+            fill: #c1c1c1;
+        }
     }
 
 }
@@ -218,6 +230,10 @@
         @media #{$retina} {
             background-image: url("#{$i}video-desktop@2x.jpg");
         }
+    }
+
+    .video__controls-volume {
+        width: 540px;
     }
 
 }

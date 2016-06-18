@@ -50,8 +50,6 @@
         display: flex;
 
         box-shadow: none;
-
-        @include clearfix;
     }
 
     .main-nav__item {

@@ -195,13 +195,21 @@
 
                 <div class="video__controls">
                     <header class="video__controls-volume">
-                        <input class="video__volume" type="range" min="0" max="100" value="80" step="1" name="" id="js-video-volume">
+                        <div class="video__volume-slider">
+                            <span class="video__volume-thumb">Громкость</span>
+                        </div>
                     </header>
 
                     <div class="video__controls-buttons">
-                        <button class="btn  btn--replay" type="button" id="js-replay"></button>
-                        <button class="btn  btn--fullscreen" type="button" id="js-fullscreen"></button>
-                        <button class="btn  btn--subtitles" type="button" id="js-subtitles"></button>
+                        <button class="video__button  video__button--replay" type="button" id="js-replay">
+                            //= templates/replay-svg.html
+                        </button>
+                        <button class="video__button  video__button--subtitles" type="button" id="js-fullscreen">
+                            //= templates/subtitles-svg.html
+                        </button>
+                        <button class="video__button  video__button--fullscreen" type="button" id="js-subtitles">
+                            //= templates/fullscreen-svg.html
+                        </button>
                     </div>
                 </div>
             </div>
