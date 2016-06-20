@@ -4,7 +4,32 @@
 <div class="page-wrapper">
 
     <!-- Page Header -->
-    //= templates/header.html
+    <header class="page-header">
+
+        <div class="page-header__inner">
+
+            <input class="nav-burger__checkbox" type="checkbox" id="burger">
+            <label class="nav-burger" for="burger">Меню</label>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <a class="main-nav__item" href="index.html">Главная</a>
+                <a class="main-nav__item  main-nav__item--active" href="photo.html">Фото и видео</a>
+                <a class="main-nav__item" href="form.html">Форма отзыва</a>
+                <a class="main-nav__item" href="https://htmlacademy.ru/">HTML academy</a>
+            </nav>
+
+            <a class="page-header__logo" href="index.html">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                    <img src="img/logo-sedona-mobile.svg" width="" height="" alt="City of Sedona">
+                </picture>
+            </a>
+
+        </div>
+
+    </header>
 
 
 
@@ -174,7 +199,6 @@
 
 
 
-
     <!-- Video -->
     <section class="video">
         <div class="video__inner">
@@ -216,8 +240,6 @@
 
         </div><!-- /.video__inner -->
     </section><!-- /.video -->
-
-
 
 
 
