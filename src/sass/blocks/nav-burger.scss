@@ -37,4 +37,14 @@
         display: none;
     }
 
+    .nav-burger__checkbox {
+
+        &:checked {
+
+            ~ .main-nav {
+                display: flex;
+            }
+        }
+    }
+
 }
