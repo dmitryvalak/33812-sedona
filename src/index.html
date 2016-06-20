@@ -43,7 +43,14 @@
             </header>
 
             <div class="reasons__photo">
-                <img src="img/photo-city@1x.jpg" width="320" height="260" alt="">
+                <picture>
+                    <source media="(min-width: 768px)"
+                            srcset="img/photo-city-desktop@1x.jpg 1x,
+                                    img/photo-city-desktop@2x.jpg 2x">
+                    <source media="(min-width: 321px)"
+                            srcset="img/photo-city-tablet@1x.jpg">
+                    <img src="img/photo-city-mobile@1x.jpg" width="320" height="260" alt="">
+                </picture>
             </div>
         </div>
 
@@ -101,7 +108,14 @@
             </header>
 
             <div class="reasons__photo">
-                <img src="img/photo-bridge@1x.jpg" width="320" height="260" alt="">
+                <picture>
+                    <source media="(min-width: 768px)"
+                            srcset="img/photo-bridge-desktop@1x.jpg 1x,
+                                    img/photo-bridge-desktop@2x.jpg 2x">
+                    <source media="(min-width: 321px)"
+                            srcset="img/photo-bridge-tablet@1x.jpg">
+                    <img src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="">
+                </picture>
             </div>
         </div>
 

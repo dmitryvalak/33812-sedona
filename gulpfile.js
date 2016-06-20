@@ -32,16 +32,16 @@ var path = {
     src: {
         html: "src/*.html",
         js: "src/js/google_map.js",
-        css: "src/sass/style.{scss, sass}",
+        css: "src/sass/style.{scss,sass}",
         img: "src/img/**/*.*",
-        fonts: "src/fonts/**/*.{woff, woff2}"
+        fonts: "src/fonts/**/*.{woff,woff2}"
     },
     watch: {
         html: "src/**/*.html",
         js: "src/js/google_map.js",
         css: "src/sass/**/*.{scss, sass}",
         img: "src/img/**/*.*",
-        fonts: "src/fonts/**/*.{woff, woff2}"
+        fonts: "src/fonts/**/*.{woff,woff2}"
     },
     clean: "./build"
 };
@@ -168,4 +168,13 @@ gulp.task("watch", function() {
 });
 
 
-gulp.task("default", ["clean", "build", "webserver", "watch"]);
+/*gulp.task("default", ["clean", "build", "webserver", "watch"]);*/
+
+gulp.task("default", function (cb) {
+   run(
+       "clean",
+       "build",
+       "webserver",
+       "watch"
+   , cb);
+});
