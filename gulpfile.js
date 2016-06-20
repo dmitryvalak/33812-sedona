@@ -3,6 +3,7 @@
 var gulp = require("gulp"),
     postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
+    mqpacker = require("css-mqpacker"),
     sass = require("gulp-sass"),
     cssnano = require("gulp-cssnano"),
     rigger = require("gulp-rigger"),
@@ -11,6 +12,8 @@ var gulp = require("gulp"),
     plumber = require("gulp-plumber"),
     imagemin = require("gulp-imagemin"),
     eol = require("gulp-eol"),
+    run = require("run-sequence"),
+    rimraf = require("rimraf"),
     webserver = require("browser-sync");
 
 
@@ -29,17 +32,18 @@ var path = {
     src: {
         html: "src/*.html",
         js: "src/js/google_map.js",
-        css: "src/sass/style.{scss,sass}",
+        css: "src/sass/style.{scss, sass}",
         img: "src/img/**/*.*",
-        fonts: "src/fonts/**/*.*"
+        fonts: "src/fonts/**/*.{woff, woff2}"
     },
     watch: {
         html: "src/**/*.html",
         js: "src/js/google_map.js",
-        css: "src/sass/**/*.{scss,sass}",
+        css: "src/sass/**/*.{scss, sass}",
         img: "src/img/**/*.*",
-        fonts: "src/fonts/**/*.*"
-    }
+        fonts: "src/fonts/**/*.{woff, woff2}"
+    },
+    clean: "./build"
 };
 
 
@@ -85,7 +89,10 @@ gulp.task("css:build", function () {
                 "last 2 Firefox versions",
                 "last 2 Opera versions",
                 "last 2 Edge versions"
-            ]})
+            ]}),
+            mqpacker({
+                sort: true
+            })
         ]))
         .pipe(cssnano({
             zindex: false,
@@ -100,8 +107,10 @@ gulp.task("css:build", function () {
 
 gulp.task("js:build", function () {
     gulp.src(path.src.js)
+        .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest(path.build.js));
+        .pipe(gulp.dest(path.build.js))
+        .pipe(webserver.reload({stream: true}));
 });
 
 
@@ -114,6 +123,7 @@ gulp.task("fonts:build", function() {
 gulp.task("image:build", function () {
     gulp.src(path.src.img)
         .pipe(imagemin({
+            optimizationLevel: 3,
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             interlaced: true
@@ -122,13 +132,21 @@ gulp.task("image:build", function () {
 });
 
 
-gulp.task("build", [
-    "html:build",
-    "css:build",
-    "js:build",
-    "fonts:build",
-    "image:build"
-]);
+gulp.task("clean", function (cb) {
+    rimraf(path.clean, cb);
+});
+
+
+gulp.task('build', function (cb) {
+    run(
+        "clean",
+        "html:build",
+        "css:build",
+        "js:build",
+        "fonts:build",
+        "image:build"
+    , cb);
+});
 
 
 gulp.task("watch", function() {
@@ -150,4 +168,4 @@ gulp.task("watch", function() {
 });
 
 
-gulp.task("default", ["build", "webserver", "watch"]);
+gulp.task("default", ["clean", "build", "webserver", "watch"]);
