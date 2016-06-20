@@ -6,6 +6,7 @@ var gulp = require("gulp"),
     sass = require("gulp-sass"),
     cssnano = require("gulp-cssnano"),
     rigger = require("gulp-rigger"),
+    uglify = require("gulp-uglify"),
     watch = require("gulp-watch"),
     plumber = require("gulp-plumber"),
     imagemin = require("gulp-imagemin"),
@@ -19,22 +20,22 @@ var gulp = require("gulp"),
 
 var path = {
     build: {
-        html: "dest/",
-        js: "dest/js/",
-        css: "dest/css/",
-        img: "dest/img/",
-        fonts: "dest/fonts/"
+        html: "build/",
+        js: "build/js/",
+        css: "build/css/",
+        img: "build/img/",
+        fonts: "build/fonts/"
     },
     src: {
         html: "src/*.html",
-        js: "src/js/*.js",
+        js: "src/js/google_map.js",
         css: "src/sass/style.{scss,sass}",
         img: "src/img/**/*.*",
         fonts: "src/fonts/**/*.*"
     },
     watch: {
         html: "src/**/*.html",
-        js: "src/js/**/*.js",
+        js: "src/js/google_map.js",
         css: "src/sass/**/*.{scss,sass}",
         img: "src/img/**/*.*",
         fonts: "src/fonts/**/*.*"
@@ -47,7 +48,7 @@ var path = {
 =========================*/
 
 var config = {
-    server: "dest/",
+    server: "build/",
     notify: false,
     open: true,
     ui: false
@@ -97,6 +98,13 @@ gulp.task("css:build", function () {
 });
 
 
+gulp.task("js:build", function () {
+    gulp.src(path.src.js)
+        .pipe(uglify())
+        .pipe(gulp.dest(path.build.js));
+});
+
+
 gulp.task("fonts:build", function() {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts));
@@ -117,6 +125,7 @@ gulp.task("image:build", function () {
 gulp.task("build", [
     "html:build",
     "css:build",
+    "js:build",
     "fonts:build",
     "image:build"
 ]);
@@ -128,6 +137,9 @@ gulp.task("watch", function() {
     });
     watch([path.watch.css], function(event, cb) {
         gulp.start("css:build");
+    });
+    watch([path.watch.js], function(event, cb) {
+        gulp.start("js:build");
     });
     watch([path.watch.img], function(event, cb) {
         gulp.start("image:build");
