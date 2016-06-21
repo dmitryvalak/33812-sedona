@@ -105,7 +105,11 @@
         top: 50%;
         z-index: 1;
 
-        transform: translate3d(-50%, -50%, 0);
+        transform: translateX(-50%) translateY(-50%);
+
+        @media #{$retina} {
+            max-width: 700px;
+        }
     }
 }
 
