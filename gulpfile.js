@@ -82,24 +82,20 @@ gulp.task("css:build", function () {
     gulp.src(path.src.css)
         .pipe(plumber())
         .pipe(sass())
-        .pipe(postcss([
-            autoprefixer({browsers: [
-                "last 1 version",
-                "last 2 Chrome versions",
-                "last 2 Firefox versions",
-                "last 2 Opera versions",
-                "last 2 Edge versions"
-            ]}),
-            mqpacker({
-                sort: true
-            })
-        ]))
         .pipe(cssnano({
             zindex: false,
             discardComments: {
                 removeAll: true
             }
         }))
+        .pipe(postcss([
+            autoprefixer({browsers: [
+                "last 3 versions"
+            ]}),
+            mqpacker({
+                sort: true
+            })
+        ]))
         .pipe(gulp.dest(path.build.css))
         .pipe(webserver.reload({stream: true}));
 });
@@ -167,8 +163,6 @@ gulp.task("watch", function() {
     });
 });
 
-
-/*gulp.task("default", ["clean", "build", "webserver", "watch"]);*/
 
 gulp.task("default", function (cb) {
    run(
