@@ -4,7 +4,32 @@
 <div class="page-wrapper">
 
     <!-- Page Header -->
-    //= templates/header.html
+    <header class="page-header">
+
+        <div class="page-header__inner">
+
+            <input class="nav-burger__checkbox" type="checkbox" id="burger">
+            <label class="nav-burger" for="burger">Меню</label>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <a class="main-nav__item" href="index.html">Главная</a>
+                <a class="main-nav__item  main-nav__item--active" href="photo.html">Фото и видео</a>
+                <a class="main-nav__item" href="form.html">Форма отзыва</a>
+                <a class="main-nav__item" href="https://htmlacademy.ru/">HTML academy</a>
+            </nav>
+
+            <a class="page-header__logo" href="index.html">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                    <img src="img/logo-sedona-mobile.svg" width="" height="" alt="City of Sedona">
+                </picture>
+            </a>
+
+        </div>
+
+    </header>
 
 
 
@@ -33,7 +58,17 @@
 
                 <div class="photos__item  photos__item--big">
                     <div class="photos__image-wrapper  photos__image-wrapper--big">
-                        <a href="img/photo-1.jpg"><img src="img/photo-1.jpg" width="1200" height="400" class="photos__image" alt="Неродные просторы"></a>
+                        <a href="img/photo-1-desktop@2x.jpg">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                        srcset="img/photo-1-desktop@1x.jpg 1x,
+                                                img/photo-1-desktop@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                        srcset="img/photo-1-tablet@1x.jpg 1x,
+                                                img/photo-1-tablet@2x.jpg 2x">
+                                <img class="photos__image" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы">
+                            </picture>
+                        </a>
                     </div>
                     <div class="photos__info">
                         <div class="photos__info-left">
@@ -41,14 +76,33 @@
                             <p class="photos__author">Автор фото: Борис</p>
                         </div>
                         <div class="photos__info-right">
-                            <p class="photos__likes">1350</p>
+                            <a href="#" class="photos__likes">
+                                <picture>
+                                    <source media="(min-width: 1200px)"
+                                        srcset="img/icon-like-desktop.svg">
+                                <source media="(min-width: 768px)"
+                                        srcset="img/icon-like-tablet.svg">
+                                    <img src="img/icon-like.svg" alt="">
+                                </picture>
+                            </a>
+                            <span class="photos__likes-count">1350</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="photos__item">
                     <div class="photos__image-wrapper">
-                        <a href="img/photo-2.jpg"><img src="img/photo-2.jpg" width="400" height="267" class="photos__image" alt="Местная растительность"></a>
+                        <a href="img/photo-2-desktop@2x.jpg">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                        srcset="img/photo-2-desktop@1x.jpg 1x,
+                                                img/photo-2-desktop@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                        srcset="img/photo-2-tablet@1x.jpg 1x,
+                                                img/photo-2-tablet@2x.jpg 2x">
+                                <img class="photos__image" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Местная растительность">
+                            </picture>
+                        </a>
                     </div>
                     <div class="photos__info">
                         <div class="photos__info-left">
@@ -56,14 +110,33 @@
                             <p class="photos__author">Автор фото: Сергей</p>
                         </div>
                         <div class="photos__info-right">
-                            <p class="photos__likes">143</p>
+                            <a href="#" class="photos__likes">
+                                <picture>
+                                    <source media="(min-width: 1200px)"
+                                        srcset="img/icon-like-desktop.svg">
+                                <source media="(min-width: 768px)"
+                                        srcset="img/icon-like-tablet.svg">
+                                    <img src="img/icon-like.svg" alt="">
+                                </picture>
+                            </a>
+                            <span class="photos__likes-count">143</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="photos__item">
                     <div class="photos__image-wrapper">
-                        <a href="img/photo-3.jpg"><img src="img/photo-3.jpg" width="400" height="267" class="photos__image" alt="Дорога на север"></a>
+                        <a href="img/photo-3-desktop@2x.jpg">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                        srcset="img/photo-3-desktop@1x.jpg 1x,
+                                                img/photo-3-desktop@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                        srcset="img/photo-3-tablet@1x.jpg 1x,
+                                                img/photo-3-tablet@2x.jpg 2x">
+                                <img class="photos__image" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Дорога на север">
+                            </picture>
+                        </a>
                     </div>
                     <div class="photos__info">
                         <div class="photos__info-left">
@@ -71,14 +144,33 @@
                             <p class="photos__author">Автор фото: Петр</p>
                         </div>
                         <div class="photos__info-right">
-                            <p class="photos__likes">96</p>
+                            <a href="#" class="photos__likes">
+                                <picture>
+                                    <source media="(min-width: 1200px)"
+                                        srcset="img/icon-like-desktop.svg">
+                                <source media="(min-width: 768px)"
+                                        srcset="img/icon-like-tablet.svg">
+                                    <img src="img/icon-like.svg" alt="">
+                                </picture>
+                            </a>
+                            <span class="photos__likes-count">96</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="photos__item">
                     <div class="photos__image-wrapper">
-                        <a href="img/photo-4.jpg"><img src="img/photo-4.jpg" width="400" height="267" class="photos__image" alt="Мост дьявола"></a>
+                        <a href="img/photo-4-desktop@2x.jpg">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                        srcset="img/photo-4-desktop@1x.jpg 1x,
+                                                img/photo-4-desktop@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                        srcset="img/photo-4-tablet@1x.jpg 1x,
+                                                img/photo-4-tablet@2x.jpg 2x">
+                                <img class="photos__image" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола">
+                            </picture>
+                        </a>
                     </div>
                     <div class="photos__info">
                         <div class="photos__info-left">
@@ -86,7 +178,16 @@
                             <p class="photos__author">Автор фото: Антон</p>
                         </div>
                         <div class="photos__info-right">
-                            <p class="photos__likes">254</p>
+                            <a href="#" class="photos__likes">
+                                <picture>
+                                    <source media="(min-width: 1200px)"
+                                        srcset="img/icon-like-desktop.svg">
+                                <source media="(min-width: 768px)"
+                                        srcset="img/icon-like-tablet.svg">
+                                    <img src="img/icon-like.svg" alt="">
+                                </picture>
+                            </a>
+                            <span class="photos__likes-count">254</span>
                         </div>
                     </div>
                 </div>
@@ -95,7 +196,6 @@
 
         </div><!-- /.photos__inner -->
     </section><!-- /.photos -->
-
 
 
 
@@ -119,21 +219,27 @@
 
                 <div class="video__controls">
                     <header class="video__controls-volume">
-                        <input class="video__volume" type="range" min="0" max="100" value="80" step="1" name="" id="js-video-volume">
+                        <div class="video__volume-slider">
+                            <span class="video__volume-thumb">Громкость</span>
+                        </div>
                     </header>
 
                     <div class="video__controls-buttons">
-                        <button class="btn  btn--replay" type="button" id="js-replay"></button>
-                        <button class="btn  btn--fullscreen" type="button" id="js-fullscreen"></button>
-                        <button class="btn  btn--subtitles" type="button" id="js-subtitles"></button>
+                        <button class="video__button  video__button--replay" type="button" id="js-replay">
+                            //= templates/replay-svg.html
+                        </button>
+                        <button class="video__button  video__button--subtitles" type="button" id="js-fullscreen">
+                            //= templates/subtitles-svg.html
+                        </button>
+                        <button class="video__button  video__button--fullscreen" type="button" id="js-subtitles">
+                            //= templates/fullscreen-svg.html
+                        </button>
                     </div>
                 </div>
             </div>
 
         </div><!-- /.video__inner -->
     </section><!-- /.video -->
-
-
 
 
 

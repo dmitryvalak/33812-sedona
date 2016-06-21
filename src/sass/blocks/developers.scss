@@ -10,13 +10,26 @@
     vertical-align: middle;
 }
 
+.developers__logo {
+    fill: $black;
+
+    transition: fill 0.1s linear;
+
+    &:hover {
+        fill: $blue;
+    }
+
+    &:active {
+        fill: $htmlacademy-logo-active;
+    }
+}
+
 
 
 @media (#{$tablet-width}) {
 
     .developers {
         text-align: right;
-        line-height: 48px;
     }
 }
 

@@ -1,5 +1,5 @@
 .page-header__inner {
-    @include container;
+    @include container-fluid;
     padding-bottom: 56px;
 
     background-color: $white;
@@ -9,9 +9,10 @@
 
 .page-header__logo {
     display: block;
+    margin: auto;
 
     position: absolute;
-    bottom: -31px;
+    bottom: -32px;
     left: 50%;
     z-index: 1;
 
@@ -23,6 +24,11 @@
 
     .page-header__inner {
         padding-bottom: 0;
+    }
+
+    .page-header__logo {
+        bottom: auto;
+        top: 0;
     }
 
 }

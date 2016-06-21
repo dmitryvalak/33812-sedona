@@ -48,19 +48,24 @@
 @media (#{$tablet-width}) {
 
     .benefits-list {
-        @include clearfix;
+        display: flex;
+        justify-content: space-between;
         max-width: none;
     }
 
     .benefits-list__item {
-        float: left;
-        width: 33.33333%;
+        flex-basis: 33.33333%;
         padding: 0 40px;
         margin-bottom: 0;
+
+        &:nth-child(2) {
+            order: 3;
+        }
     }
 
     .benefits-list__title {
-        margin-top: 25px;
+        margin-top: 28px;
+        margin-bottom: 21px;
 
         font-size: $benefits-title-tablet;
         text-align: center;

@@ -1,8 +1,8 @@
 .section-header__inner {
     width: 100%;
-    max-width: 540px;
+    max-width: 320px;
     margin: 0 auto;
-    padding: 40px 25px;
+    padding: 40px 25px 20px;
 
     box-sizing: border-box;
 }
@@ -20,16 +20,17 @@
 .section-header__text {
     text-align: center;
     text-transform: uppercase;
-    color: $black;
-    line-height: 1.8;
+    color: $light_black;
+    line-height: 1.7;
 }
 
 
 @media (#{$tablet-width}) {
 
     .section-header__inner {
-        padding-top: 65px;
-        padding-bottom: 65px;
+        max-width: 540px;
+        padding-top: 48px;
+        padding-bottom: 45px;
     }
 
     .section-header__title {

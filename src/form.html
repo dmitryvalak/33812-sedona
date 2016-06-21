@@ -4,7 +4,32 @@
 <div class="page-wrapper">
 
     <!-- Page Header -->
-    //= templates/header.html
+    <header class="page-header">
+
+        <div class="page-header__inner">
+
+            <input class="nav-burger__checkbox" type="checkbox" id="burger">
+            <label class="nav-burger" for="burger">Меню</label>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <a class="main-nav__item" href="index.html">Главная</a>
+                <a class="main-nav__item" href="photo.html">Фото и видео</a>
+                <a class="main-nav__item  main-nav__item--active" href="form.html">Форма отзыва</a>
+                <a class="main-nav__item" href="https://htmlacademy.ru/">HTML academy</a>
+            </nav>
+
+            <a class="page-header__logo" href="index.html">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                    <img src="img/logo-sedona-mobile.svg" width="" height="" alt="City of Sedona">
+                </picture>
+            </a>
+
+        </div>
+
+    </header>
 
 
 
@@ -54,7 +79,7 @@
 
 
                 <!-- Contact Data -->
-                <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset  form__fieldset--contacts">
                     <header class="form__fieldset-header">
                         <h3 class="form__fieldset-title  form__fieldset-title--centered">Контактная информация:</h3>
                     </header>
@@ -82,7 +107,7 @@
 
                 <!-- Rating -->
                 <fieldset class="form__fieldset  form__fieldset--rating">
-                    <h3 class="form__fieldset-title">Ваше общее впечатление:</h3>
+                    <h3 class="form__fieldset-title  form__fieldset-title--rating">Ваше общее впечатление:</h3>
 
                     <div class="form__group">
                         <input class="form__radio" type="radio" name="rating" id="rating_good" checked>
@@ -103,7 +128,7 @@
 
 
                 <!-- Places -->
-                <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset  form__fieldset-places">
                     <header class="form__fieldset-header">
                         <h3 class="form__fieldset-title  form__fieldset-title--centered">Посещенные достопримечательности:</h3>
                     </header>
@@ -139,21 +164,19 @@
                         <h3 class="form__fieldset-title  form__fieldset-title--centered">Опишите свои эмоции:</h3>
                     </header>
 
-                    <div class="form__group">
-                        <textarea class="form__textarea" name="review_text" id="review-text" placeholder="Опишите подробно все свои восторги"></textarea>
-                    </div>
+                    <textarea class="form__textarea" name="review_text" id="review-text" placeholder="Опишите подробно все свои восторги"></textarea>
+
                     <div class="form__btn-wrapper">
-                        <div class="form__group  form__group--big">
+                        <div class="form__group  form__group--btn">
                             <button class="btn  btn--blue" type="submit">Отправить отзыв</button>
                         </div>
-                        <div class="form__group  form__group--big">
+                        <div class="form__group  form__group--btn">
                             <p class="form__tip">* — обязательные поля</p>
                         </div>
                     </div>
                 </fieldset>
 
             </form>
-
 
         </div><!-- /.form__inner -->
     </section><!-- /.form -->

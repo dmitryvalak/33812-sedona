@@ -13,11 +13,32 @@
 
     &--grey {
         background-color: $grey;
+        color: $black;
+    }
+
+    &--triangle {
+        margin-top: 20px;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 27px;
+
+            background: url("#{$i}bg-intro-triangle-tablet-blue.svg") center no-repeat;
+            background-size: cover;
+
+            position: absolute;
+            top: -27px;
+            left: 0;
+            z-index: 1;
+        }
     }
 }
 
 .reasons__inner {
-    @include container;
+    @include container-fluid;
     overflow: hidden;
 
     box-sizing: border-box;
@@ -32,6 +53,8 @@
     margin: 0 auto;
     padding: 40px 25px;
 
+    box-sizing: border-box;
+
     &--border {
         border-bottom: 1px solid #d6d6d6;
     }
@@ -42,7 +65,7 @@
 }
 
 .reasons__title {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
     font-size: $reasons-title;
     text-align: center;
@@ -50,7 +73,7 @@
 }
 
 .reasons__num {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 
     text-align: center;
 }
@@ -59,6 +82,10 @@
     text-align: center;
     text-transform: uppercase;
     line-height: 1.5;
+
+    &--black {
+        color: $light_black;
+    }
 }
 
 .reasons__photo {
@@ -95,18 +122,19 @@
         font-size: $reasons-title-tablet;
     }
 
+    .reasons__text {
+        hyphens: auto;
+    }
+
     .reasons__header {
         flex-basis: 33.33333%;
         padding: 0 45px;
-
-        box-sizing: border-box;
 
         &--right {
             order: 1;
         }
 
         &--small {
-            align-self: flex-start;
             padding: 45px 48px;
         }
 
@@ -129,15 +157,45 @@
 }
 
 
+
+@media (#{$mobile-width}) {
+
+    .reasons {
+
+        &:after {
+            height: 57px;
+            top: -57px;
+        }
+    }
+}
+
+
+@media (#{$tablet-width}) {
+
+    .reasons {
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
+
 @media (#{$desktop-width}) {
 
     .reasons__header {
         padding-left: 65px;
         padding-right: 65px;
+
+        &--small {
+            padding-left: 65px;
+            padding-right: 65px;
+            padding-bottom: 65px;
+        }
     }
 
     .reasons__title {
-        padding: 0 40px;
+        padding: 0 55px;
     }
 
 }

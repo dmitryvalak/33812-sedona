@@ -1,6 +1,6 @@
 .benefits__inner {
-    @include container();
-    padding: 20px;
+    @include container-fluid();
+    padding: 25px 20px;
 
     box-sizing: border-box;
 }
@@ -9,7 +9,15 @@
 @media (#{$tablet-width}) {
 
     .benefits__inner {
-        padding: 50px 10px;
+        padding: 52px 10px 61px;
+    }
+
+}
+
+@media (#{$desktop-width}) {
+
+    .benefits__inner {
+        padding-bottom: 80px;
     }
 
 }

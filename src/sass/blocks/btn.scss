@@ -47,76 +47,13 @@
         transition: background-color 0.1s linear;
     }
 
-    &--replay {
-        width: 16px;
-        height: 20px;
-        padding: 0;
-
-        background: url("#{$i}icon-video-replay.svg") no-repeat;
-    }
-
-    &--subtitles {
-        float: right;
-        width: 32px;
-        height: 20px;
-        padding: 0;
-
-        background: url("#{$i}icon-video-subtitles.svg") no-repeat;
-    }
-
-    &--fullscreen {
-        float: right;
-        width: 20px;
-        height: 20px;
-        padding: 0;
-        margin-left: 30px;
-
-        background: url("#{$i}icon-video-fullscreen.svg") no-repeat;
-    }
-
 }
 
 
 @keyframes blue-in-progress {
 
-    0%   { background-color: #5496bd; }
+    0%   { background-color: $blue-active; }
     50%  { background-color: #3e84ae; }
-    100% { background-color: #5496bd; }
+    100% { background-color: $blue-active; }
 
 }
-
-
-@media (#{$tablet-width}) {
-
-    .btn {
-
-        &--replay,
-        &--subtitles,
-        &--fullscreen {
-            float: none;
-
-            position: absolute;
-            top: 34px;
-            z-index: 1;
-        }
-
-        &--replay {
-            left: 35px;
-        }
-
-        &--subtitles {
-            right: 90px;
-        }
-
-        &--fullscreen {
-            right: 40px;
-        }
-    }
-
-}
-
-
-
-
-
-

@@ -21,7 +21,7 @@
     margin-bottom: 35px;
 
     line-height: 1.8;
-    color: $black;
+    color: $light_black;
     text-align: center;
     text-transform: uppercase;
 }
@@ -30,11 +30,28 @@
 @media (#{$tablet-width}) {
 
     .cta__inner {
-        padding-top: 50px;
+        padding-top: 45px;
+        padding-bottom: 59px;
     }
 
     .cta__title {
         font-size: $cta-title-tablet;
+    }
+
+    .cta__text {
+        margin-bottom: 44px;
+    }
+
+}
+
+@media (#{$desktop-width}) {
+
+    .cta__inner {
+        padding-bottom: 69px;
+    }
+
+    .cta__title {
+        margin-bottom: 27px;
     }
 
 }
