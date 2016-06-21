@@ -17,6 +17,11 @@
     z-index: 1;
 
     transform: translateX(-50%);
+
+    img {
+        width: 102px;
+        height: 83px;
+    }
 }
 
 
@@ -29,6 +34,19 @@
     .page-header__logo {
         bottom: auto;
         top: 0;
+    }
+
+}
+
+
+@media (#{$desktop-width}) {
+
+    .page-header__logo {
+
+        img {
+            width: 188px;
+            height: 96px;
+        }
     }
 
 }
