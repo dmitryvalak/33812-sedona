@@ -134,6 +134,7 @@
 
     .video__source {
         width: 650px;
+        margin-top: 15px;
         position: relative;
     }
 
@@ -220,8 +221,13 @@
 
 @media (#{$desktop-width}) {
 
+    .video__inner {
+        padding-bottom: 87px;
+    }
+
     .video__source {
         width: 800px;
+        margin-top: 23px;
     }
 
     .video__media {

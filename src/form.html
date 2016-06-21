@@ -79,7 +79,7 @@
 
 
                 <!-- Contact Data -->
-                <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset  form__fieldset--contacts">
                     <header class="form__fieldset-header">
                         <h3 class="form__fieldset-title  form__fieldset-title--centered">Контактная информация:</h3>
                     </header>
@@ -107,7 +107,7 @@
 
                 <!-- Rating -->
                 <fieldset class="form__fieldset  form__fieldset--rating">
-                    <h3 class="form__fieldset-title">Ваше общее впечатление:</h3>
+                    <h3 class="form__fieldset-title  form__fieldset-title--rating">Ваше общее впечатление:</h3>
 
                     <div class="form__group">
                         <input class="form__radio" type="radio" name="rating" id="rating_good" checked>
@@ -128,7 +128,7 @@
 
 
                 <!-- Places -->
-                <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset  form__fieldset-places">
                     <header class="form__fieldset-header">
                         <h3 class="form__fieldset-title  form__fieldset-title--centered">Посещенные достопримечательности:</h3>
                     </header>
@@ -164,14 +164,13 @@
                         <h3 class="form__fieldset-title  form__fieldset-title--centered">Опишите свои эмоции:</h3>
                     </header>
 
-                    <div class="form__group">
-                        <textarea class="form__textarea" name="review_text" id="review-text" placeholder="Опишите подробно все свои восторги"></textarea>
-                    </div>
+                    <textarea class="form__textarea" name="review_text" id="review-text" placeholder="Опишите подробно все свои восторги"></textarea>
+
                     <div class="form__btn-wrapper">
-                        <div class="form__group  form__group--big">
+                        <div class="form__group  form__group--btn">
                             <button class="btn  btn--blue" type="submit">Отправить отзыв</button>
                         </div>
-                        <div class="form__group  form__group--big">
+                        <div class="form__group  form__group--btn">
                             <p class="form__tip">* — обязательные поля</p>
                         </div>
                     </div>
