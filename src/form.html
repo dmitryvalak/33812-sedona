@@ -23,7 +23,7 @@
                 <picture>
                     <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
                     <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-                    <img src="img/logo-sedona-mobile.svg" width="" height="" alt="City of Sedona">
+                    <img src="img/logo-sedona-mobile.svg" width="188" height="96" alt="City of Sedona">
                 </picture>
             </a>
 
@@ -54,7 +54,7 @@
     <section class="form">
         <div class="form__inner">
 
-            <form class="form__data-form" action="#" method="#">
+            <form class="form__data-form" action="/" method="post">
 
                 <!-- Personal Data -->
                 <fieldset class="form__fieldset  form__fieldset--personal">
@@ -128,7 +128,7 @@
 
 
                 <!-- Places -->
-                <fieldset class="form__fieldset  form__fieldset-places">
+                <fieldset class="form__fieldset  form__fieldset--places">
                     <header class="form__fieldset-header">
                         <h3 class="form__fieldset-title  form__fieldset-title--centered">Посещенные достопримечательности:</h3>
                     </header>
@@ -159,7 +159,7 @@
 
 
                 <!-- Emotions -->
-                <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset  form__fieldset--emotions">
                     <header class="form__fieldset-header">
                         <h3 class="form__fieldset-title  form__fieldset-title--centered">Опишите свои эмоции:</h3>
                     </header>
@@ -188,5 +188,9 @@
 
 </div><!-- /.page-wrapper -->
 
+
+
+<!-- Picturefill -->
+<script src="js/picturefill.min.js"></script>
 
 //= templates/end.html

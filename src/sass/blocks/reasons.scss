@@ -96,14 +96,20 @@
     img {
         display: block;
         width: auto;
+        height: auto;
+        min-height: 260px;
         margin: 0 auto;
 
         position: absolute;
         left: 50%;
-        top: 0;
+        top: 50%;
         z-index: 1;
 
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-50%);
+
+        @media #{$retina} {
+            max-width: 700px;
+        }
     }
 }
 
@@ -145,13 +151,6 @@
 
     .reasons__photo {
         flex-basis: 66.66666%;
-
-        img {
-            width: 100%;
-            position: static;
-
-            transform: translateX(0);
-        }
     }
 
 }

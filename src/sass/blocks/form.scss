@@ -99,10 +99,6 @@
     &--icon {
         padding-right: 70px;
     }
-
-    &--inline {
-        flex-grow: 1;
-    }
 }
 
 .form__textarea {
@@ -279,18 +275,16 @@
 
     .form__data-form {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
     }
 
     .form__fieldset {
-        flex-basis: 100%;
+        max-width: 50%;
+        flex-basis: 50%;
         border-top: 0;
         padding: 35px 0 30px;
 
         &--rating {
-            flex-basis: 50%;
-            align-self: flex-start;
             order: -1;
             padding-top: 0;
 
@@ -298,10 +292,16 @@
         }
 
         &--personal {
-            flex-basis: 50%;
-            align-self: flex-end;
             padding-left: 55px;
             padding-top: 0;
+        }
+
+        &--places,
+        &--contacts,
+        &--emotions {
+            max-width: 100%;
+            flex-basis: 100%;
+            flex-grow: 1;
         }
     }
 
@@ -356,6 +356,7 @@
         margin: 20px auto;
 
         .form__group {
+            max-width: 50%;
             flex-basis: 50%;
             padding-left: 25px;
             box-sizing: border-box;

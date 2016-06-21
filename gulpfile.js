@@ -31,14 +31,14 @@ var path = {
     },
     src: {
         html: "src/*.html",
-        js: "src/js/google_map.js",
+        js: "src/js/*.js",
         css: "src/sass/style.{scss,sass}",
         img: "src/img/**/*.*",
         fonts: "src/fonts/**/*.{woff,woff2}"
     },
     watch: {
         html: "src/**/*.html",
-        js: "src/js/google_map.js",
+        js: "src/js/*.js",
         css: "src/sass/**/*.{scss, sass}",
         img: "src/img/**/*.*",
         fonts: "src/fonts/**/*.{woff,woff2}"
