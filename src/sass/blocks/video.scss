@@ -10,7 +10,7 @@
     width: 100%;
     height: 200px;
 
-    background: $light_grey url("#{$i}video-mobile@1x.jpg") center no-repeat;
+    background: #a67e63 url("#{$i}video-mobile@1x.jpg") center no-repeat;
     background-size: auto 100%;
 
     @media #{$retina} {
@@ -20,7 +20,7 @@
 
 .video__source {
     width: 320px;
-    margin: 0 auto;
+    margin: 12px auto 0;
 
     position: relative;
 }
@@ -227,7 +227,7 @@
 
     .video__source {
         width: 800px;
-        margin-top: 30px;
+        margin-top: 25px;
     }
 
     .video__media {

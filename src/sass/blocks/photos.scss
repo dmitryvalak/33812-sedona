@@ -10,7 +10,7 @@
 
 .photos__item {
     margin: 0 auto;
-    padding: 20px 20px 0;
+    padding: 28px 20px 0;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -77,7 +77,7 @@
 @media (#{$tablet-width}) {
 
     .photos {
-        margin-top: 14px;
+        margin-top: 27px;
         margin-bottom: 10px;
     }
 
@@ -152,6 +152,10 @@
 
 
 @media (#{$desktop-width}) {
+
+    .photos {
+        margin-top: 20px;
+    }
 
     .photos__list {
         max-width: none;
